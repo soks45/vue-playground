@@ -33,6 +33,7 @@ const startGame = () => {
       <div class="row" v-for="row in board.rows" :key="row">
         <Cell v-for="cell in row" v-bind:cellState="cell.state.value" :class="{ disabled: cell.isDisabled.value }" @click="board.makeTurn(cell)"></Cell>
       </div>
+      <button class="new-game" @click="startGame">New Game!</button>
     </div>
     <div v-if="!board.isGameStarted.value" class="game-starter flexCentered">
       <button class="new-game" @click="startGame">New Game!</button>
@@ -71,6 +72,7 @@ const startGame = () => {
     border-radius: 3rem;
     background-color: aliceblue;
     border: 1px solid aquamarine;
+    margin: 0 auto;
   }
 
   iframe {
