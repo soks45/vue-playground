@@ -14,6 +14,10 @@ const startGame = () => {
   startVideo();
   board.startGame();
 }
+
+const id = 'CoaQhwDIvOc';
+const src = 'https://www.youtube.com/embed/' + id + `?rel=0&enablejsapi=1&loop=1&playlist=${id}`;
+
 </script>
 
 
@@ -23,8 +27,8 @@ const startGame = () => {
         id="videoFrame"
         width="1903"
         height="762"
-        src="https://www.youtube.com/embed/10V5eJDatQY?enablejsapi=1"
-        title="Yujiro Swims in a 20Km/h Pool on Vacation Scene ||  Hanma Baki: Son of Ogre Episode 3 English Sub"
+        :src="src"
+        title="Baki - Yujiro Laughs at Baki [4K]"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
