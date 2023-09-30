@@ -37,7 +37,7 @@ const src = 'https://www.youtube.com/embed/' + id + `?rel=0&enablejsapi=1&loop=1
       <div class="row" v-for="row in board.rows" :key="row">
         <Cell v-for="cell in row" v-bind:cellState="cell.state.value" :class="{ disabled: cell.isDisabled.value }" @click="board.makeTurn(cell)"></Cell>
       </div>
-      <button class="new-game" @click="startGame">New Game!</button>
+      <button v-if="board.isGameStarted.value" class="new-game" @click="startGame">New Game!</button>
     </div>
     <div v-if="!board.isGameStarted.value" class="game-starter flexCentered">
       <button class="new-game" @click="startGame">New Game!</button>

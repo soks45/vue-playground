@@ -11,8 +11,9 @@ defineProps({
 
 <template>
   <div class="cell flexCentered">
-    <img v-if="cellState === CellState.circle" src="@assets/circle.svg" />
-    <img v-if="cellState === CellState.cross" src="@assets/cross.svg" />
+    <img v-if="cellState !== CellState.empty"
+         :alt="cellState === CellState.cross ? 'circle' : 'cross'"
+         :src="cellState === CellState.cross ? 'src/assets/circle.svg' : 'src/assets/cross.svg'" />
   </div>
 </template>
 
